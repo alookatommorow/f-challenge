@@ -32,6 +32,8 @@ end
 group :test do
   gem 'capybara', '>= 2.15'
   gem 'chromedriver-helper'
+  gem 'database_cleaner'
+  gem 'factory_bot_rails', '~> 4.0'
   gem 'rspec'
   gem 'selenium-webdriver'
 end
