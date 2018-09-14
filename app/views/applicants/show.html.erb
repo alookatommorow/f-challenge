@@ -1,9 +1,6 @@
 <h2>Welcome, <%= @applicant.name.titleize %> </h2>
 
-<% @applied_employers.each do |employer| %>
-  <p><%= employer.name.titleize %></p>
-<% end %>
-
+<h4>Employers to which you can apply</h4>
 <% @open_employers.each do |employer| %>
   <p><%= employer.name.titleize %></p>
   <%= form_for JobApplication.new do |f| %>
@@ -11,4 +8,11 @@
     <%= f.hidden_field :employer_id, value: employer.id %>
     <%= f.submit 'Apply' %>
   <% end %>
+<% end %>
+
+<br>
+
+<h4>Employers to which you have applied</h4>
+<% @applied_employers.each do |employer| %>
+  <p><%= employer.name.titleize %></p>
 <% end %>
