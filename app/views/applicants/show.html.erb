@@ -6,5 +6,9 @@
 
 <% @open_employers.each do |employer| %>
   <p><%= employer.name.titleize %></p>
-  <button>apply</button>
+  <%= form_for JobApplication.new do |f| %>
+    <%= f.hidden_field :applicant_id, value: @applicant.id %>
+    <%= f.hidden_field :employer_id, value: employer.id %>
+    <%= f.submit 'Apply' %>
+  <% end %>
 <% end %>
