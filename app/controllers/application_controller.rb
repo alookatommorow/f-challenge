@@ -10,6 +10,6 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    resource.class == Applicant ? applicants_path : employers_path
+    resource.class == Applicant ? applicant_path(resource) : employer_path(resource)
   end
 end
