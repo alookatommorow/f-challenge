@@ -1,5 +1,6 @@
 <h2>Welcome, <%= @employer.name.titleize %></h2>
 <% if @applicants.length > 0 %>
+  <h4>Current applicants:</p>
   <% @applicants.each do |applicant| %>
     <p><%= applicant.name.titleize %></p>
   <% end %>
