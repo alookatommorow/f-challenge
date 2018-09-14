@@ -10,6 +10,8 @@
   </head>
 
   <body>
+    <%= render 'applicant_nav' if current_applicant %>
+    <%= render 'employer_nav' if current_employer %>
     <%= yield %>
   </body>
 </html>
