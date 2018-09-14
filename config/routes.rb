@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :applicants, only: :show
   resources :employers, only: :show
+  resources :job_applications, only: :create
 
   root to: 'welcome#index'
 end
