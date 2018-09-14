@@ -1,4 +1,6 @@
 class JobApplication < ActiveRecord::Base
+  validates :applicant_id, :employer_id, presence: true
+  
   belongs_to :applicant
   belongs_to :employer
 
