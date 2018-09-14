@@ -1,1 +1,10 @@
-<h2>Welcome applicant</h2>
+<h2>Welcome, <%= @applicant.name.titleize %> </h2>
+
+<% @applied_employers.each do |employer| %>
+  <p><%= employer.name.titleize %></p>
+<% end %>
+
+<% @open_employers.each do |employer| %>
+  <p><%= employer.name.titleize %></p>
+  <button>apply</button>
+<% end %>
